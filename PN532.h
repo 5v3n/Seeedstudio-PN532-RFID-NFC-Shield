@@ -5,7 +5,11 @@
 // by Seeed Technology Inc (www.seeedstudio.com)
 
 
-#include <WProgram.h>
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
 
 #define PN532_PREAMBLE 0x00
 #define PN532_STARTCODE1 0x00
